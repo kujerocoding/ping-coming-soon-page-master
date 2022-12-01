@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="/style.css">
-    <script src="/main.js"></script>
+    <script src="/main.js" defer></script>
     <title>Ping Single Column Coming Soon Page</title>
 </head>
 <body>
@@ -15,25 +15,25 @@
         <h1 class="title">We are launching <span>soon!</span></h1>
         <p>Subscribe and get notified</p>
         </h1>
-        <form action="">
+        <form action="submit" novalidate>
             <div class="input__container">
-                <input type="email" placeholder="Your email address...">
+                <input type="email" placeholder="Your email address..." class="input--email" novalidate>
                 <p class="message--error">
                     Please provide a valid email address
                 </p>
             </div>
-            <button>Notify Me</button>
+            <button type="submit">Notify Me</button>
         </form>
         <img src="/images/illustration-dashboard.png" alt="" class="img--dashboard">
         <div class="icon__container">
-            <div class="icon">
-                <img src="/images/fb-logo.svg" alt="" class="icon--fb">
+            <div class="icon icon--fb" >
+                <img src="/images/fb-logo.svg" alt="">
             </div>
-            <div class="icon">
-                <img src="/images/twitter-logo.svg" alt="" class="icon--twitter">
+            <div class="icon icon--twitter">
+                <img src="/images/twitter-logo.svg" alt="">
             </div>
-            <div class="icon">
-                <img src="/images/instagram-logo.svg" alt="" class="icon--instagram">
+            <div class="icon icon--instagram">
+                <img src="/images/instagram-logo.svg" alt="">
             </div>
            
         </div>
