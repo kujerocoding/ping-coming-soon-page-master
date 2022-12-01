@@ -3,7 +3,7 @@
 :root {
     --FF: 'Libre Franklin', sans-serif;
     --FS: 20px;
-    --PRIMARYBLUE: hsl(223, 87%, 63%);
+    --PRIMARYBLUE: #4f7df3;
     --PALEBLUE: hsl(223, 100%, 88%);
     --LIGHTRED: hsl(354, 100%, 66%);
     --GRAY: hsl(0, 0%, 59%);
@@ -16,11 +16,121 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: var(--FF);
+    font-size: var(--FS);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main__container {
+    margin: 0 auto;
+    padding-inline: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.img--logo {
+    margin-bottom: 20px;
+}
+
+.title {
+    color: var(--GRAY);
+    font-weight: lighter;
+}
+
+.title > span {
+    color: black;
+    font-weight: bold;
+}
+
+form{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+form > * {
+    all: unset;
+    width: 70%;
+    padding: 20px 40px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+form input {
+    text-align: left;
+    outline: 1px solid var(--PRIMARYBLUE);
+}
+
+form button {
+    background-color: var(--PRIMARYBLUE);
+    color: white;
+}
+
+.img--dashboard {
+    margin-top: 70px;
+    width: 100%;
+}
+
+.icon__container {
+    margin-top: 200px;
+    display: flex;
+    gap: 30px;
+}
+
 .icon {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    stroke-width: 0;
-    stroke: blue;
-    fill: red;
-  }
+    border: 1px solid var(--GRAY);
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+}
+
+footer {
+    margin-top: 30px;
+    color: var(--GRAY);
+}
+
+@media (min-width: 50em) {
+    
+    .main__container {
+        max-width: 700px;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 2.5em;
+    }
+
+    .img--dashboard {
+        margin-top: 0;
+    }
+
+    .icon__container {
+        transform: scale(60%);
+        margin-top: 0;
+    }
+
+    form input {
+        min-width: 50%;
+        max-width: 50%;
+        margin-right: 20px;
+
+    }
+
+    form button {
+        width: 20%;
+        display: inline;
+    }
+
+    footer {
+        font-size: .7em;
+        margin-top: 10px;
+    }
+}
